@@ -1,7 +1,7 @@
 import React from 'react'
-import Products from './Products/product';
-import Header from './Layouts/header';
-import Subheader from './Layouts/subHeader';
+import Products from './Components/Products/product';
+import Header from './Components/Layouts/header'
+import Subheader from './Components/Layouts/subHeader'
 
 
 const App=()=>{
