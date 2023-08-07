@@ -2,20 +2,20 @@ import ReactDom from "react-dom"
 import { BackDrop } from "./Loader"
 
 
-const Modal = () => {
+const Modal = ({onClose,children}) => {
     return (
         <>
             {
                 ReactDom.createPortal(
                     <>
-                        <BackDrop />
+                        <BackDrop onClose={onClose}/>
                         <div className="modal">
-                            Modal Content
+                            <button type="close" onClick={onClose}>X</button>
+                            <div className="content">{children}</div>
                         </div>
                     </>
                     ,
                     document.getElementById("modal-root")
-                    
                 )
             }
         </>
